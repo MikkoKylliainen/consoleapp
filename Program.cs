@@ -10,7 +10,13 @@ Console.WriteLine("Hello "+fname);
 
 Console.WriteLine("jotain");
 
-int.TryParse(Console.ReadLine(), out age);
+//int.TryParse(Console.ReadLine(), out age);
 
-byear=2022-age;
-Console.WriteLine("yea " +byear);
+try {
+    age=int.Parse(Console.ReadLine());
+    byear=2022-age;
+    Console.WriteLine("yea " +byear);    
+}
+catch (System.Exception){
+    Console.WriteLine("numbah please");
+}
